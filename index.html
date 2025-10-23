@@ -3,94 +3,244 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مِنى ترافل - العمرة والحج</title>
+  <title>منا ترافل | رحلات حلال</title>
   <link rel="stylesheet" href="style.css">
-
   <style>
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background-color: #fff;
+      color: #333;
+      direction: rtl;
+    }
+
+    /* 🌍 الشريط العلوي */
+    .top-banner {
+      background: linear-gradient(to left, #e9d89a, #c6a43d);
+      color: #000;
+      text-align: center;
+      padding: 8px 0;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    /* 🕌 الرأس */
+    header {
+      background-color: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+
+    header img {
+      height: 55px;
+      border-radius: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    /* ✨ القسم الرئيسي */
+    .hero {
+      position: relative;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Putra_Mosque_and_Putrajaya_Lake.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #f8e9a1;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #fff7db;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background-color: #d4af37;
+      border: none;
+      padding: 12px 28px;
+      font-size: 18px;
+      color: #333;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* 🔁 اختيار اللغة */
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+    }
+
+    .lang-switch a {
+      color: #000;
+      background: #fff6d6;
+      padding: 6px 14px;
+      margin-left: 6px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      border: 1px solid #c6a43d;
+      transition: 0.3s;
+    }
+
+    .lang-switch a:hover {
+      background: #d4af37;
+      color: white;
+    }
+
+    /* 💼 الخدمات */
+    section {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .services h2, .offers h2 {
+      color: #b68c00;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .services ul {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services li {
+      margin: 0.6rem 0;
+      font-size: 1.1rem;
+    }
+
+    /* 🌟 العروض */
+    .offers {
+      background-color: #fffdf8;
+      border-top: 3px solid #d4af37;
+      padding: 3rem 1.5rem;
+    }
+
+    .offers p {
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-gold {
+      background-color: #b68c00;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: #d4af37;
+    }
+
+    /* 🖤 الفوتر */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer span {
+      color: #d4af37;
     }
   </style>
 </head>
-
 <body>
-  <!-- ✅ رأس الصفحة -->
+
+  <div class="top-banner">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
+
   <header>
-    <div class="navbar">
-      <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار مِنى ترافل" class="logo">
-        <h1>Mina Travel</h1>
-      </div>
-
-      <nav>
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="#services">خدماتنا</a>
-        <a href="#offers">عروضنا</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-
-      <div class="lang-switch">
-        <a href="index.html" class="lang-btn">AR</a>
-        <a href="index-fr.html" class="lang-btn">FR</a>
-      </div>
-    </div>
+    <img src="logo.png" alt="شعار منى ترافل">
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#offers">عروضنا</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
   </header>
 
-  <!-- ✨ القسم الرئيسي -->
   <section class="hero">
-    <h2>رحلتك للعمرة تبدأ معنا!</h2>
-    <p>نحن نقدم لك كل ما تحتاجه لرحلة مريحة وميسّرة:</p>
-    <ul>
-      <li>تأطير من طرف مرشد ديني ذو خبرة</li>
-      <li>تأشيرة عمرة أو تأشيرة سياحية</li>
-      <li>حجز الفنادق وتذاكر الطيران</li>
-      <li>نقل مريح من وإلى المطار</li>
-      <li>العمرة بالنيابة عن المرضى أو المتوفين</li>
-      <li>زيارات دينية وتاريخية</li>
-      <li>مساعدة رجال الأعمال</li>
-    </ul>
-    <p>معنا... راحتك وعبادتك أولويتنا 🌙</p>
+    <div class="hero-content">
+      <h1>رحلتك إلى العمرة تبدأ معنا!</h1>
+      <p>نقدّم رحلات مريحة وروحانية تجمع بين الإيمان والراحة والأناقة — راحتك وسكينتك هي أولويتنا.</p>
+      <button>احجز الآن</button>
+    </div>
 
-    <a href="contact.html" class="cta-button">احجز الآن</a>
+    <div class="lang-switch">
+      <a href="index.html">AR</a>
+      <a href="index-fr.html">FR</a>
+    </div>
   </section>
 
-  <!-- 🕋 خدماتنا -->
   <section id="services" class="services">
     <h2>خدماتنا</h2>
     <ul>
       <li>تأشيرات العمرة والسياحة</li>
-      <li>حجوزات الفنادق والطيران</li>
-      <li>خدمات النقل المريحة من وإلى المطار</li>
-      <li>العمرة بالنيابة عن المرضى أو المتوفين</li>
+      <li>حجوزات الفنادق والرحلات الجوية</li>
+      <li>تنقلات مريحة وآمنة</li>
+      <li>عمرة بالنيابة للمرضى والمتوفين</li>
       <li>زيارات دينية وتاريخية</li>
     </ul>
   </section>
 
-  <!-- 💎 عروضنا -->
   <section id="offers" class="offers">
     <h2>عروضنا</h2>
-    <p>استفد الآن من التخفيضات الخاصة على برامج العمرة لشهر رمضان المبارك!</p>
-    <a href="contact.html" class="cta-button">احجز عرضك الآن</a>
+    <p>🌙 اغتنم الفرصة واحجز رحلتك الرمضانية بأسعار خاصة جدًا!</p>
+    <a href="offers.html" class="btn-gold">عرض العروض</a>
   </section>
 
-  <!-- 🌙 الفوتر -->
   <footer>
-    <p><strong>المكتب في المغرب:</strong> شارع الحسن الثاني، تمارة سنتر 12000</p>
-    <p><strong>المكتب في بلجيكا:</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-    <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
-    <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
-    <p>📧 minatravel2019@gmail.com</p>
+    © 2025 <span>Mina Travel</span> — جميع الحقوق محفوظة.
   </footer>
 
-  <!-- ✅ تفعيل الانتقال السلس -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
-    });
-  </script>
 </body>
 </html>
-
