@@ -1,245 +1,108 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منا ترافل | رحلات حلال</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background-color: #fff;
-      color: #333;
-      direction: rtl;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مِنا ترافل — رحلات حول العالم</title>
 
-    /* 🌍 الشريط العلوي */
-    .top-banner {
-      background: linear-gradient(to left, #e9d89a, #c6a43d);
-      color: #000;
-      text-align: center;
-      padding: 8px 0;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    /* 🕌 الرأس */
-    header {
-      background-color: #222;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 40px;
-    }
-
-    header img {
-      height: 55px;
-      border-radius: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    /* ✨ القسم الرئيسي */
-    .hero {
-      position: relative;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Putra_Mosque_and_Putrajaya_Lake.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-      color: #f8e9a1;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #fff7db;
-      margin-bottom: 30px;
-    }
-
-    .hero button {
-      background-color: #d4af37;
-      border: none;
-      padding: 12px 28px;
-      font-size: 18px;
-      color: #333;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* 🔁 اختيار اللغة */
-    .lang-switch {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-    }
-
-    .lang-switch a {
-      color: #000;
-      background: #fff6d6;
-      padding: 6px 14px;
-      margin-left: 6px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 13px;
-      border: 1px solid #c6a43d;
-      transition: 0.3s;
-    }
-
-    .lang-switch a:hover {
-      background: #d4af37;
-      color: white;
-    }
-
-    /* 💼 الخدمات */
-    section {
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    .services h2, .offers h2 {
-      color: #b68c00;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .services ul {
-      list-style: none;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .services li {
-      margin: 0.6rem 0;
-      font-size: 1.1rem;
-    }
-
-    /* 🌟 العروض */
-    .offers {
-      background-color: #fffdf8;
-      border-top: 3px solid #d4af37;
-      padding: 3rem 1.5rem;
-    }
-
-    .offers p {
-      margin: 1rem 0 2rem;
-      font-size: 1.1rem;
-    }
-
-    .btn-gold {
-      background-color: #b68c00;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-gold:hover {
-      background-color: #d4af37;
-    }
-
-    /* 🖤 الفوتر */
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.95rem;
-    }
-
-    footer span {
-      color: #d4af37;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="top-banner">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
+  <div class="top-bar">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
 
   <header>
-    <img src="logo.png" alt="شعار منى ترافل">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Mina Travel Logo" class="logo">
+      <div class="site-title">مِنا ترافل</div>
+    </div>
+
     <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#offers">عروضنا</a>
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="offers.html">عروضنا</a>
       <a href="contact.html">اتصل بنا</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>رحلتك إلى العمرة تبدأ معنا!</h1>
-      <p>نقدّم رحلات مريحة وروحانية تجمع بين الإيمان والراحة والأناقة — راحتك وسكينتك هي أولويتنا.</p>
-      <button>احجز الآن</button>
-    </div>
+  <main>
+    <section class="hero" style="background-image:url('images/putra.jpg');">
+      <div class="lang-switch">
+        <a href="index-fr.html">FR</a>
+      </div>
 
-    <div class="lang-switch">
-      <a href="index.html">AR</a>
-      <a href="index-fr.html">FR</a>
-    </div>
-  </section>
+      <div class="content">
+        <h1>رحلتك إلى العمرة تبدأ معنا</h1>
+        <p>نقدّم رحلات روحانية، مريحة، ومصمَّمة بعناية لتجمع بين الراحة والعبادة.</p>
+      </div>
+    </section>
 
-  <section id="services" class="services">
-    <h2>خدماتنا</h2>
-    <ul>
-      <li>تأشيرات العمرة والسياحة</li>
-      <li>حجوزات الفنادق والرحلات الجوية</li>
-      <li>تنقلات مريحة وآمنة</li>
-      <li>عمرة بالنيابة للمرضى والمتوفين</li>
-      <li>زيارات دينية وتاريخية</li>
-    </ul>
-  </section>
+    <section id="services" class="services">
+      <div class="section-title">خدماتنا</div>
+      <ul>
+        <li>تأشيرات العمرة والزيارة</li>
+        <li>حجوزات فنادق وطيران</li>
+        <li>نقل من وإلى المطار</li>
+        <li>تنفيذ عمرة بالنيابة عن المتوفين والمرضى</li>
+        <li>زيارات دينية وتاريخية</li>
+      </ul>
+    </section>
 
-  <section id="offers" class="offers">
-    <h2>عروضنا</h2>
-    <p>🌙 اغتنم الفرصة واحجز رحلتك الرمضانية بأسعار خاصة جدًا!</p>
-    <a href="offers.html" class="btn-gold">عرض العروض</a>
-  </section>
+    <section id="offers" class="offers">
+      <div class="section-title">عروضنا</div>
+      <p style="text-align:center; color:var(--muted);">اختيارات مميزة: عمرة رمضان، رحلات إسطنبول، إقامات فخمة في ماليزيا ودبي.</p>
+
+      <div class="offers-grid">
+        <article class="offer">
+          <img src="images/putra.jpg" alt="عمرة">
+          <div class="body">
+            <h3>عمرة رمضان المبارك</h3>
+            <p>حزمة كاملة مع إقامة قريبة من الحرم وخدمات متكاملة.</p>
+            <a class="cta" href="contact.html">اتصل بنا</a>
+          </div>
+        </article>
+
+        <article class="offer">
+          <img src="images/istanbul.jpg" alt="إسطنبول">
+          <div class="body">
+            <h3>رحلة إسطنبول الحلال</h3>
+            <p>إقامة في فنادق حلال وجولات تاريخية مريحة.</p>
+            <a class="cta" href="contact.html">اتصل بنا</a>
+          </div>
+        </article>
+
+        <article class="offer">
+          <img src="images/kualalumpur.jpg" alt="كوالالمبور">
+          <div class="body">
+            <h3>إقامة فاخرة في كوالالمبور</h3>
+            <p>فنادق 5★ مع خدمات متميزة وبرنامج سياحي متكامل.</p>
+            <a class="cta" href="contact.html">اتصل بنا</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title">تواصل معنا</div>
+      <div class="contact-card">
+        <form action="https://formspree.io/f/mzzjqjog" method="POST">
+          <input type="text" name="name" placeholder="الاسم الكامل" required>
+          <input type="email" name="_replyto" placeholder="البريد الإلكتروني" required>
+          <textarea name="message" placeholder="رسالتك..." required></textarea>
+          <button type="submit">إرسال الرسالة</button>
+        </form>
+
+        <div class="wa-links">
+          <a href="https://wa.me/32487491576" target="_blank">💬 واتساب (بلجيكا)</a>
+          <a href="https://wa.me/212661865316" target="_blank">💬 واتساب (المغرب)</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 <span>Mina Travel</span> — جميع الحقوق محفوظة.
+    © 2025 مِنا ترافل — جميع الحقوق محفوظة.
   </footer>
 
 </body>
