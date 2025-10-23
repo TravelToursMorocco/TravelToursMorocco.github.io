@@ -1,245 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mina Travel | Voyages Halal</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mina Travel — Voyages Halal</title>
 
-    /* 🌍 Bande supérieure */
-    .top-banner {
-      background: linear-gradient(to right, #e9d89a, #c6a43d);
-      color: #000;
-      text-align: center;
-      padding: 8px 0;
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.5px;
-    }
-
-    /* 🕌 En-tête */
-    header {
-      background-color: #222;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 40px;
-    }
-
-    header img {
-      height: 55px;
-      border-radius: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    /* 🌇 Section Héro */
-    .hero {
-      position: relative;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/23/Grande_Mosqu%C3%A9e_de_Paris_1.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-      color: #f8e9a1;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #fff7db;
-      margin-bottom: 30px;
-    }
-
-    .hero button {
-      background-color: #d4af37;
-      border: none;
-      padding: 12px 28px;
-      font-size: 18px;
-      color: #333;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* 🌐 Sélecteur de langue */
-    .lang-switch {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-    }
-
-    .lang-switch a {
-      color: #000;
-      background: #fff6d6;
-      padding: 6px 14px;
-      margin-right: 6px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 13px;
-      border: 1px solid #c6a43d;
-      transition: 0.3s;
-    }
-
-    .lang-switch a:hover {
-      background: #d4af37;
-      color: white;
-    }
-
-    /* 💼 Services */
-    section {
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    .services h2, .offers h2 {
-      color: #b68c00;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .services ul {
-      list-style: none;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .services li {
-      margin: 0.6rem 0;
-      font-size: 1.1rem;
-    }
-
-    /* 🌟 Offres */
-    .offers {
-      background-color: #fffdf8;
-      border-top: 3px solid #d4af37;
-      padding: 3rem 1.5rem;
-    }
-
-    .offers p {
-      margin: 1rem 0 2rem;
-      font-size: 1.1rem;
-    }
-
-    .btn-gold {
-      background-color: #b68c00;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-gold:hover {
-      background-color: #d4af37;
-    }
-
-    /* 🖤 Pied de page */
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.95rem;
-    }
-
-    footer span {
-      color: #d4af37;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="top-banner">✨ Voyages Halal — Confort, Foi et Élégance ✨</div>
+  <div class="top-bar">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
 
   <header>
-    <img src="logo.png" alt="Logo Mina Travel">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Mina Travel Logo" class="logo">
+      <div class="site-title">Mina Travel</div>
+    </div>
+
     <nav>
-      <a href="index-fr.html">Accueil</a>
-      <a href="#services">Nos Services</a>
-      <a href="#offers">Nos Offres</a>
-      <a href="contact.html">Contact</a>
+      <a href="index-fr.html" class="active">Accueil</a>
+      <a href="services-fr.html">Services</a>
+      <a href="offers-fr.html">Offres</a>
+      <a href="contact-fr.html">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Votre voyage vers la Omra commence avec nous !</h1>
-      <p>Nous vous offrons des voyages spirituels et confortables qui allient foi, sérénité et élégance — votre tranquillité est notre priorité.</p>
-      <button>Réservez maintenant</button>
-    </div>
+  <main>
+    <section class="hero" style="background-image:url('images/putra.jpg');">
+      <div class="lang-switch">
+        <a href="index.html">AR</a>
+      </div>
 
-    <div class="lang-switch">
-      <a href="index.html">AR</a>
-      <a href="index-fr.html">FR</a>
-    </div>
-  </section>
+      <div class="content">
+        <h1>Commencez votre Omra avec nous</h1>
+        <p>Nous proposons des séjours spirituels et confortables, conçus avec soin pour allier sérénité et confort.</p>
+      </div>
+    </section>
 
-  <section id="services" class="services">
-    <h2>Nos Services</h2>
-    <ul>
-      <li>Visa Omra et Tourisme</li>
-      <li>Réservation d’hôtels et vols</li>
-      <li>Transports confortables et sécurisés</li>
-      <li>Omra par procuration (malades ou défunts)</li>
-      <li>Visites religieuses et culturelles</li>
-    </ul>
-  </section>
+    <section id="services" class="services">
+      <div class="section-title">Nos Services</div>
+      <ul>
+        <li>Visas Omra et tourisme</li>
+        <li>Réservation hôtels & vols</li>
+        <li>Transferts aéroport</li>
+        <li>Omra par procuration</li>
+        <li>Visites religieuses et culturelles</li>
+      </ul>
+    </section>
 
-  <section id="offers" class="offers">
-    <h2>Nos Offres</h2>
-    <p>🌙 Profitez de nos offres spéciales pour le Ramadan ! Réservez votre place dès maintenant.</p>
-    <a href="offers.html" class="btn-gold">Voir les offres</a>
-  </section>
+    <section id="offers" class="offers">
+      <div class="section-title">Nos Offres</div>
+      <p style="text-align:center; color:var(--muted);">Offres sélectionnées : Omra Ramadan, Istanbul Halal, séjours de luxe en Malaisie et Dubaï.</p>
+
+      <div class="offers-grid">
+        <article class="offer">
+          <img src="images/putra.jpg" alt="Omra">
+          <div class="body">
+            <h3>Omra Ramadan</h3>
+            <p>Pack complet avec hébergement près du Haram et services dédiés.</p>
+            <a class="cta" href="contact-fr.html">Contactez-nous</a>
+          </div>
+        </article>
+
+        <article class="offer">
+          <img src="images/istanbul.jpg" alt="Istanbul">
+          <div class="body">
+            <h3>Séjour Halal à Istanbul</h3>
+            <p>Hôtels halal et circuits culturels soignés.</p>
+            <a class="cta" href="contact-fr.html">Contactez-nous</a>
+          </div>
+        </article>
+
+        <article class="offer">
+          <img src="images/kualalumpur.jpg" alt="Kuala Lumpur">
+          <div class="body">
+            <h3>Séjour Luxe à Kuala Lumpur</h3>
+            <p>Hôtels 5★, excursions et confort garanti.</p>
+            <a class="cta" href="contact-fr.html">Contactez-nous</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-card">
+        <form action="https://formspree.io/f/mzzjqjog" method="POST">
+          <input type="text" name="name" placeholder="Nom complet" required>
+          <input type="email" name="_replyto" placeholder="Adresse e-mail" required>
+          <textarea name="message" placeholder="Votre message..." required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="wa-links">
+          <a href="https://wa.me/32487491576" target="_blank">💬 WhatsApp (Belgique)</a>
+          <a href="https://wa.me/212661865316" target="_blank">💬 WhatsApp (Maroc)</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 <span>Mina Travel</span> — Tous droits réservés.
+    © 2025 Mina Travel — Tous droits réservés.
   </footer>
 
 </body>
