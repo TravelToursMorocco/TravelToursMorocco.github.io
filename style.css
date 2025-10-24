@@ -1,165 +1,280 @@
-body {
+/* =========================================================
+   TravelToursMorocco — Gold & White Elegant Theme
+   Author: Mina Travel
+   ========================================================= */
+
+/* Reset */
+* {
   margin: 0;
-  font-family: "Cairo", sans-serif;
-  background-color: #fffef8;
-  color: #333;
-  direction: rtl;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+:root {
+  --gold: #d4af37;
+  --gold-dark: #b68c00;
+  --bg: #fffdf8;
+  --text: #222;
+  --muted: #666;
+  --black: #111;
 }
 
-/* الشريط العلوي */
-.top-banner {
-  background: linear-gradient(to left, #fff7cc, #f0d98a);
-  color: #333;
+/* Global */
+body {
+  font-family: "Cairo", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top Bar */
+.top-bar {
+  background: linear-gradient(90deg, var(--gold) 0%, #fff8e7 100%);
+  color: var(--black);
   text-align: center;
-  padding: 8px 0;
+  padding: 8px 12px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.95rem;
 }
 
-/* الرأس */
+/* Header */
 header {
-  background-color: white;
-  color: #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 14px 28px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+}
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--black);
 }
 
-header img {
-  height: 55px;
-  margin-left: 10px;
-  border-radius: 10px;
-}
-
+/* Nav */
 nav a {
-  color: #333;
+  color: var(--black);
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 12px;
   font-weight: 600;
-  transition: 0.3s;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+nav a:hover, nav a.active {
+  background: var(--gold);
+  color: #fff;
 }
 
-nav a:hover {
-  color: #c6a43d;
-}
-
-/* القسم الرئيسي */
+/* Hero Section */
 .hero {
   position: relative;
-  background-image: url('../images/putra.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
+  min-height: 70vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #fff;
+  overflow: hidden;
 }
-
-.overlay {
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.6);
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
-
-.hero-content {
+.hero .content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 800px;
 }
-
 .hero h1 {
-  font-size: 42px;
-  color: #b68c2c;
+  font-size: 2.6rem;
+  color: #fff7db;
+  margin-bottom: 12px;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
-
 .hero p {
-  font-size: 18px;
-  margin: 20px 0 30px;
-  color: #5a4c2a;
+  font-size: 1.05rem;
+  color: #fff6d9;
 }
 
-.btn {
-  background-color: #d4af37;
-  padding: 12px 28px;
-  border-radius: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+/* Section */
+section {
+  padding: 60px 16px;
 }
-
-.btn:hover {
-  background-color: #b38b2e;
-}
-
-/* اختيار اللغة */
-.lang-switch {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-}
-
-.lang-switch a {
-  color: #333;
-  background: #fff6d6;
-  padding: 6px 12px;
-  margin-right: 6px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid #d4af37;
-  transition: 0.3s;
-}
-
-.lang-switch a:hover {
-  background: #d4af37;
-  color: white;
-}
-
-/* الاتصال */
-.contact {
-  padding: 60px 20px;
+.section-title {
+  color: var(--gold-dark);
+  font-size: 1.8rem;
   text-align: center;
+  margin-bottom: 24px;
 }
 
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+/* Services */
+.services ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
 }
-
-.contact input,
-.contact textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  border: 1px solid #ccc;
+.services li {
+  background: #fff;
   border-radius: 10px;
-  font-size: 16px;
-}
-
-.contact button {
-  background: #d4af37;
-  border: none;
-  padding: 12px;
-  border-radius: 25px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.contact button:hover {
-  background: #b38b2e;
-}
-
-footer {
-  background: #fff7cc;
-  color: #333;
+  padding: 16px;
   text-align: center;
-  padding: 12px 0;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Offers */
+.offers-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.offer {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+.offer img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.offer .body {
+  padding: 16px;
+  text-align: center;
+}
+.offer h3 {
+  color: var(--gold-dark);
+  margin-bottom: 10px;
+}
+.offer p {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.offer a.cta {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--gold-dark);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.offer a.cta:hover {
+  background: var(--gold);
+}
+.offer:hover {
+  transform: translateY(-6px);
+}
+
+/* Contact */
+.contact-card {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact-card button {
+  background: var(--gold-dark);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
   font-weight: bold;
-  margin-top: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.contact-card button:hover {
+  background: var(--gold);
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+}
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fff;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 22px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
 }
