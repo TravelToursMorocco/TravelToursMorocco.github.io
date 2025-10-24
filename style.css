@@ -1,283 +1,165 @@
-Mijn Numer, [24/10/2025 22:00]
-/* =========================================================
-   TravelToursMorocco — Gold & White Elegant Theme
-   Author: Mina Travel
-   ========================================================= */
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  scroll-behavior: smooth;
-}
-:root {
-  --gold: #d4af37;
-  --gold-dark: #b68c00;
-  --bg: #fffdf8;
-  --text: #222;
-  --muted: #666;
-  --black: #111;
-}
-
-/* Global */
 body {
-  font-family: "Cairo", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #fffef8;
+  color: #333;
+  direction: rtl;
 }
 
-/* Top Bar */
-.top-bar {
-  background: linear-gradient(90deg, var(--gold) 0%, #fff8e7 100%);
-  color: var(--black);
+/* الشريط العلوي */
+.top-banner {
+  background: linear-gradient(to left, #fff7cc, #f0d98a);
+  color: #333;
   text-align: center;
-  padding: 8px 12px;
+  padding: 8px 0;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
-/* Header */
+/* الرأس */
 header {
+  background-color: white;
+  color: #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 28px;
-  background: #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.logo {
-  height: 60px;
-  width: auto;
-  border-radius: 8px;
-}
-.site-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--black);
+  padding: 10px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Nav */
+header img {
+  height: 55px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
 nav a {
-  color: var(--black);
+  color: #333;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 15px;
   font-weight: 600;
-  padding: 6px 8px;
-  border-radius: 6px;
-  transition: 0.2s;
-}
-nav a:hover, nav a.active {
-  background: var(--gold);
-  color: #fff;
+  transition: 0.3s;
 }
 
-/* Hero Section */
+nav a:hover {
+  color: #c6a43d;
+}
+
+/* القسم الرئيسي */
 .hero {
   position: relative;
-  min-height: 70vh;
-  background: url("images/hero.jpg") center/cover no-repeat;
+  background-image: url('../images/putra.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
-  overflow: hidden;
 }
-.hero::before {
-  content: "";
+
+.overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
 }
-.hero .content {
+
+.hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 700px;
 }
+
 .hero h1 {
-  font-size: 2.6rem;
-  color: #fff7db;
-  margin-bottom: 12px;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  font-size: 42px;
+  color: #b68c2c;
 }
+
 .hero p {
-  font-size: 1.05rem;
-  color: #fff6d9;
+  font-size: 18px;
+  margin: 20px 0 30px;
+  color: #5a4c2a;
 }
 
-/* Section */
-section {
-  padding: 60px 16px;
-}
-.section-title {
-  color: var(--gold-dark);
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-/* Services */
-.services ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.services li {
-  background: #fff;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* Offers */
-.offers-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-.offer {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-}
-.offer img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.offer .body {
-  padding: 16px;
-  text-align: center;
-}
-.offer h3 {
-  color: var(--gold-dark);
-  margin-bottom: 10px;
-}
-.offer p {
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-.offer a.cta {
-  display: inline-block;
-  padding: 10px 16px;
-  background: var(--gold-dark);
+.btn {
+  background-color: #d4af37;
+  padding: 12px 28px;
+  border-radius: 25px;
   color: #fff;
-  border-radius: 999px;
   text-decoration: none;
-  font-weight: 700;
-  transition: 0.2s;
-}
-.offer a.cta:hover {
-  background: var(--gold);
-}
-.offer:hover {
-  transform: translateY(-6px);
-}
-
-/* Contact */
-.contact-card {
-  max-width: 750px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  text-align: center;
-}
-.contact-card input,
-.contact-card textarea {
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
-
-Mijn Numer, [24/10/2025 22:00]
-border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-.contact-card button {
-  background: var(--gold-dark);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 999px;
   font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.contact-card button:hover {
-  background: var(--gold);
+  transition: 0.3s;
 }
 
-/* Footer */
-footer {
-  background: var(--black);
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.95rem;
+.btn:hover {
+  background-color: #b38b2e;
 }
-footer a {
-  color: var(--gold);
+
+/* اختيار اللغة */
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.lang-switch a {
+  color: #333;
+  background: #fff6d6;
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 12px;
   text-decoration: none;
-}
-footer a:hover {
-  color: #fff;
+  font-weight: bold;
+  border: 1px solid #d4af37;
+  transition: 0.3s;
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #25d366;
+.lang-switch a:hover {
+  background: #d4af37;
   color: white;
-  border-radius: 50%;
-  padding: 14px;
-  font-size: 22px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
-.whatsapp-btn:hover {
-  transform: scale(1.1);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-  nav {
-    margin-top: 10px;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
+/* الاتصال */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contact button {
+  background: #d4af37;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #b38b2e;
+}
+
+footer {
+  background: #fff7cc;
+  color: #333;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  margin-top: 40px;
 }
