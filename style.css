@@ -1,280 +1,153 @@
-/* =========================================================
-   TravelToursMorocco — Gold & White Elegant Theme
-   Author: Mina Travel
-   ========================================================= */
-
-/* Reset */
+/* إعداد عام للصفحة */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
-  height: 100%;
+
+html {
   scroll-behavior: smooth;
 }
-:root {
-  --gold: #d4af37;
-  --gold-dark: #b68c00;
-  --bg: #fffdf8;
-  --text: #222;
-  --muted: #666;
-  --black: #111;
-}
 
-/* Global */
 body {
-  font-family: "Cairo", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-  background: var(--bg);
-  color: var(--text);
+  direction: rtl;
+  font-family: 'Cairo', 'Tahoma', sans-serif;
+  background-color: #ffffff;
+  color: #333;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  text-align: right;
 }
 
-/* Top Bar */
-.top-bar {
-  background: linear-gradient(90deg, var(--gold) 0%, #fff8e7 100%);
-  color: var(--black);
-  text-align: center;
-  padding: 8px 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-/* Header */
+/* الرأس (Header) */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 28px;
-  background: #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.logo {
-  height: 60px;
-  width: auto;
-  border-radius: 8px;
-}
-.site-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--black);
-}
-
-/* Nav */
-nav a {
-  color: var(--black);
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 600;
-  padding: 6px 8px;
-  border-radius: 6px;
-  transition: 0.2s;
-}
-nav a:hover, nav a.active {
-  background: var(--gold);
-  color: #fff;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  min-height: 70vh;
-  background: url("images/hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(to left, #512da8, #673ab7);
+  color: white;
+  padding: 20px 0;
   text-align: center;
-  color: #fff;
-  overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-.hero .content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-.hero h1 {
-  font-size: 2.6rem;
-  color: #fff7db;
-  margin-bottom: 12px;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-.hero p {
-  font-size: 1.05rem;
-  color: #fff6d9;
 }
 
-/* Section */
-section {
-  padding: 60px 16px;
-}
-.section-title {
-  color: var(--gold-dark);
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 24px;
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
 }
 
-/* Services */
-.services ul {
+nav ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.services li {
-  background: #fff;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
 }
 
-/* Offers */
-.offers-grid {
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffd54f;
+}
+
+/* الأقسام الرئيسية */
+section {
+  padding: 60px 20px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
+}
+
+section h2 {
+  color: #512da8;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* الصور */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* الأزرار */
+.btn {
+  display: inline-block;
+  background: #673ab7;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #512da8;
+}
+
+/* الفوتر */
+footer {
+  background-color: #512da8;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* أقسام العروض */
+.offers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
 .offer {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-}
-.offer img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.offer .body {
-  padding: 16px;
+  background-color: #f6f5fb;
+  border-radius: 15px;
+  padding: 15px;
   text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
-.offer h3 {
-  color: var(--gold-dark);
+
+.offer img {
+  border-radius: 10px;
   margin-bottom: 10px;
 }
+
+.offer h3 {
+  color: #512da8;
+  margin-bottom: 10px;
+}
+
 .offer p {
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-.offer a.cta {
-  display: inline-block;
-  padding: 10px 16px;
-  background: var(--gold-dark);
-  color: #fff;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.2s;
-}
-.offer a.cta:hover {
-  background: var(--gold);
-}
-.offer:hover {
-  transform: translateY(-6px);
-}
-
-/* Contact */
-.contact-card {
-  max-width: 750px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  text-align: center;
-}
-.contact-card input,
-.contact-card textarea {
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-.contact-card button {
-  background: var(--gold-dark);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.contact-card button:hover {
-  background: var(--gold);
-}
-
-/* Footer */
-footer {
-  background: var(--black);
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
   font-size: 0.95rem;
 }
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-}
-footer a:hover {
-  color: #fff;
-}
 
-/* WhatsApp Floating Button */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #25d366;
-  color: white;
-  border-radius: 50%;
-  padding: 14px;
-  font-size: 22px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive */
+/* تجاوب مع الهواتف */
 @media (max-width: 768px) {
-  header {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
     flex-direction: column;
+    gap: 10px;
   }
-  nav {
-    margin-top: 10px;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
+
+  section {
+    padding: 40px 15px;
   }
 }
