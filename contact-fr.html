@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Mina Travel</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Travel Tours Morocco</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <div class="top-bar">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
+<body>
+  <div class="top-bar">
+    Contactez-nous : +212 600 000 000 | traveltoursmorocco3@gmail.com
+  </div>
 
   <header>
     <div class="logo-container">
-      <img src="images/logo.png" class="logo" alt="logo">
-      <div class="site-title">Mina Travel</div>
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <span class="site-title">Travel Tours Morocco</span>
     </div>
     <nav>
-      <a href="index-fr.html">Accueil</a>
-      <a href="index.html">AR</a>
+      <a href="index.html">Accueil</a>
+      <a href="offres.html">Offres</a>
+      <a href="umrah.html">Omra</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="contact">
-      <div class="section-title">Contact</div>
+  <div class="lang-switch">
+    <a href="contact.html">FR</a>
+    <a href="ar/contact.html">عربي</a>
+  </div>
 
-      <div class="contact-card">
-        <form action="https://formspree.io/f/mzzjqjog" method="POST">
-          <input type="text" name="name" placeholder="Nom complet" required>
-          <input type="email" name="_replyto" placeholder="Adresse e-mail" required>
-          <textarea name="message" placeholder="Votre message..." required></textarea>
-          <button type="submit">Envoyer</button>
-        </form>
+  <section class="hero" style="background-image:url('images/contact-bg.jpg');">
+    <div class="content">
+      <h1>Contactez-nous</h1>
+      <p>Notre équipe est à votre service pour toute question ou réservation</p>
+    </div>
+  </section>
 
-        <div class="wa-links">
-          <a href="https://wa.me/32487491576" target="_blank">💬 WhatsApp (Belgique)</a>
-          <a href="https://wa.me/212661865316" target="_blank">💬 WhatsApp (Maroc)</a>
-        </div>
-
-        <p style="margin-top:12px; color:var(--muted);">Email: minatravel2019@gmail.com</p>
-      </div>
-    </section>
-  </main>
+  <section class="contact">
+    <h2 class="section-title">Envoyez-nous un message</h2>
+    <div class="contact-card">
+      <form action="https://formspree.io/f/mayvblqz" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid #ccc;">
+        <input type="email" name="email" placeholder="Votre email" required style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid #ccc;">
+        <textarea name="message" rows="5" placeholder="Votre message..." required style="width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid #ccc;"></textarea>
+        <button type="submit" class="cta">Envoyer</button>
+      </form>
+      <p style="margin-top:14px;">📞 Téléphone : +212 600 000 000</p>
+      <p>📧 Email : traveltoursmorocco3@gmail.com</p>
+      <p>📍 Adresse : Casablanca, Maroc</p>
+    </div>
+  </section>
 
   <footer>
-    © 2025 Mina Travel — Tous droits réservés.
+    <p>© 2025 Travel Tours Morocco | Tous droits réservés</p>
+    <p>Propulsé par <a href="#">Asfar Al Motakamila</a></p>
   </footer>
 
+  <a href="https://wa.me/212600000000" target="_blank" class="whatsapp-btn">💬</a>
 </body>
 </html>
