@@ -11,7 +11,7 @@
 <body>
   <!-- الشريط العلوي -->
   <div class="top-bar">
-    اتصل بنا: +212661865316 | traveltoursmorocco3@gmail.com
+  
   </div>
 
   <!-- رأس الصفحة -->
@@ -82,16 +82,33 @@
 
   <!-- اتصل بنا -->
   <section class="contact">
-    <h2 class="section-title">تواصل معنا</h2>
-    <div class="contact-card">
-      <form>
-        <input type="text" placeholder="الاسم الكامل" required>
-        <input type="email" placeholder="البريد الإلكتروني" required>
-        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-        <button type="submit">إرسال</button>
-      </form>
-    </div>
-  </section>
+      <div class="section-title">تواصل معنا</div>
+
+      <div class="contact-card">
+        <form action="https://formspree.io/f/mzzjqjog" method="POST">
+          <input type="text" name="name" placeholder="الاسم الكامل" required>
+          <input type="email" name="_replyto" placeholder="البريد الإلكتروني" required>
+          <textarea name="message" placeholder="الرسالة..." required></textarea>
+          <button type="submit">إرسال</button>
+        </form>
+
+        <div class="wa-links">
+          <a href="https://wa.me/32487491576" target="_blank">💬 واتساب (بلجيكا)</a>
+          <a href="https://wa.me/212661865316" target="_blank">💬 واتساب (المغرب)</a>
+        </div>
+
+        <p style="margin-top:12px; color:var(--muted);">البريد الإلكتروني: minatravel2019@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 مِنا ترافل — جميع الحقوق محفوظة.
+  </footer>
+
+</body>
+</html>
+
 
   <!-- الفوتر -->
   <footer>
@@ -99,9 +116,6 @@
     <p>بإشراف شركة <a href="#">منى ترافل</a></p>
   </footer>
 
-  <!-- زر واتساب -->
-  <a href="https://wa.me/212661865316" target="_blank" class="whatsapp-btn">
-    💬
   </a>
 </body>
 </html>
