@@ -1,140 +1,51 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اتصل بنا | Mina Travel</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: "Cairo", sans-serif;
-      background-color: #f4f8f8;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #004e64;
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .contact-container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: right;
-    }
-    .contact-container img {
-      width: 160px;
-      display: block;
-      margin: 0 auto 20px;
-    }
-    .contact-container h2 {
-      color: #004e64;
-      text-align: center;
-    }
-    .contact-info {
-      margin: 20px 0;
-      line-height: 1.8;
-      text-align: center;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    form button {
-      background-color: #008793;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      display: block;
-      margin: 10px auto;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 15px;
-      background: #004e64;
-      color: white;
-      border-radius: 0 0 10px 10px;
-    }
-    .whatsapp-buttons a {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px;
-      transition: 0.3s;
-    }
-    .whatsapp-buttons a:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>اتصل بنا — مِنا ترافل</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <div class="top-bar">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
+
   <header>
-    <h1>Mina Travel - اتصل بنا</h1>
+    <div class="logo-container">
+      <img src="images/logo.png" class="logo" alt="logo">
+      <div class="site-title">مِنا ترافل</div>
+    </div>
     <nav>
       <a href="index.html">الرئيسية</a>
-      <a href="contact.html">اتصل بنا</a>
+      <a href="index-fr.html">FR</a>
     </nav>
   </header>
 
-  <div class="contact-container">
-    <div class="whatsapp-buttons" style="text-align:center;">
-      <a href="https://wa.me/32487491576" target="_blank">💬 تواصل عبر واتساب (بلجيكا)</a>
-      <a href="https://wa.me/212661865316" target="_blank">💬 تواصل عبر واتساب (المغرب)</a>
-    </div>
+  <main>
+    <section class="contact">
+      <div class="section-title">تواصل معنا</div>
 
-    <img src="Logo.png" alt="شعار Mina Travel" />
+      <div class="contact-card">
+        <form action="https://formspree.io/f/mzzjqjog" method="POST">
+          <input type="text" name="name" placeholder="الاسم الكامل" required>
+          <input type="email" name="_replyto" placeholder="البريد الإلكتروني" required>
+          <textarea name="message" placeholder="الرسالة..." required></textarea>
+          <button type="submit">إرسال</button>
+        </form>
 
-    <h2>تواصل معنا</h2>
+        <div class="wa-links">
+          <a href="https://wa.me/32487491576" target="_blank">💬 واتساب (بلجيكا)</a>
+          <a href="https://wa.me/212661865316" target="_blank">💬 واتساب (المغرب)</a>
+        </div>
 
-    <div class="contact-info">
-      <p>📧 البريد الإلكتروني: <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a></p>
-      <p>بلجيكا: <span dir="ltr">+32 487 49 15 76</span></p>
-      <p>المغرب: <span dir="ltr">+212 661 86 53 16</span></p>
-      <p>📍 العنوان: Avenue Hassan II, Témara Centre 12000, Maroc</p>
-    </div>
-
-    <form action="mailto:minatravel2019@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="الاسم الكامل" required />
-      <input type="email" name="email" placeholder="البريد الإلكتروني" required />
-      <textarea name="message" rows="5" placeholder="رسالتك..." required></textarea>
-      <button type="submit">إرسال</button>
-    </form>
-
-    <div style="margin-top: 40px; text-align: center;">
-      <h3>📍 موقعنا على الخريطة</h3>
-      <iframe 
-        src="https://www.google.com/maps?q=Avenue%20Hassan%20II%2C%20Temara%20Centre%2012000%2C%20Morocco&output=embed" 
-        width="100%" height="300" style="border-radius:10px; border:0;">
-      </iframe>
-    </div>
-  </div>
+        <p style="margin-top:12px; color:var(--muted);">البريد الإلكتروني: minatravel2019@gmail.com</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Mina Travel | جميع الحقوق محفوظة</p>
+    © 2025 مِنا ترافل — جميع الحقوق محفوظة.
   </footer>
+
 </body>
 </html>
-
-
