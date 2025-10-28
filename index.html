@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منى ترافل - رحلات العمرة والسياحة</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مِنا ترافل — رحلات حول العالم</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- الشريط العلوي -->
-  <div class="top-bar">
-  
-  </div>
 
-  <!-- رأس الصفحة -->
+  <div class="top-bar">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
+
   <header>
     <div class="logo-container">
-      <img src="images/logo.png" alt="Logo" class="logo">
-      <span class="site-title">Travel Tours Morocco</span>
+      <img src="images/logo.png" alt="Mina Travel Logo" class="logo">
+      <div class="site-title">مِنا ترافل</div>
     </div>
+
     <nav>
-      <a href="#" class="active">الرئيسية</a>
-      <a href="offers.html">العروض</a>
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="offers.html">عروضنا</a>
       <a href="contact.html">اتصل بنا</a>
     </nav>
   </header>
 
-  <!-- القسم الرئيسي -->
-  <section class="hero">
-    <div class="content">
-      <h1>رحلتك إلى العمرة تبدأ معنا</h1>
-      <p>نقدم أفضل العروض للعمرة والحج والسياحة في المغرب وتركيا وإندونيسيا</p>
-    </div>
-  </section>
-
-  <!-- الخدمات -->
-  <section class="services">
-    <h2 class="section-title">خدماتنا</h2>
-    <ul>
-      <li>رحلات العمرة والحج</li>
-      <li>السياحة الداخلية بالمغرب</li>
-      <li>الفنادق الإسلامية في تركيا</li>
-      <li>حجوزات تذاكر الطيران</li>
-      <li>تنظيم الجولات السياحية</li>
-    </ul>
-  </section>
-
-  <!-- العروض -->
-  <section class="offers">
-    <h2 class="section-title">عروض مميزة</h2>
-    <div class="offers-grid">
-      <div class="offer">
-        <img src="images/makkah.jpg" alt="عمرة رمضان">
-        <div class="body">
-          <h3>عمرة رمضان</h3>
-          <p>بأفضل الأسعار والخدمات الفندقية المميزة</p>
-          <a href="offers.html" class="cta">المزيد</a>
-        </div>
+  <main>
+    <section class="hero" style="background-image:url('images/putra.jpg');">
+      <div class="lang-switch">
+        <a href="index-fr.html">FR</a>
       </div>
 
-      <div class="offer">
-        <img src="images/turkey.jpg" alt="تركيا">
-        <div class="body">
-          <h3>رحلات تركيا</h3>
-          <p>استمتع بأجمل المدن التركية مع برامجنا السياحية الرائعة</p>
-          <a href="offers.html" class="cta">المزيد</a>
-        </div>
+      <div class="content">
+        <h1>رحلتك إلى العمرة تبدأ معنا</h1>
+        <p>نقدّم رحلات روحانية، مريحة، ومصمَّمة بعناية لتجمع بين الراحة والعبادة.</p>
       </div>
+    </section>
 
-      <div class="offer">
-        <img src="images/morocco.jpg" alt="المغرب">
-        <div class="body">
-          <h3>السياحة الداخلية بالمغرب</h3>
-          <p>استكشف الجمال الطبيعي والثقافي لبلدنا الحبيب</p>
-          <a href="offers.html" class="cta">المزيد</a>
-        </div>
+    <section id="services" class="services">
+      <div class="section-title">خدماتنا</div>
+      <ul>
+        <li>تأشيرات العمرة والزيارة</li>
+        <li>حجوزات فنادق وطيران</li>
+        <li>نقل من وإلى المطار</li>
+        <li>تنفيذ عمرة بالنيابة عن المتوفين والمرضى</li>
+        <li>زيارات دينية وتاريخية</li>
+      </ul>
+    </section>
+
+    <section id="offers" class="offers">
+      <div class="section-title">عروضنا</div>
+      <p style="text-align:center; color:var(--muted);">اختيارات مميزة: عمرة رمضان، رحلات إسطنبول، إقامات فخمة في ماليزيا ودبي.</p>
+
+      <div class="offers-grid">
+        <article class="offer">
+          <img src="images/putra.jpg" alt="عمرة">
+          <div class="body">
+            <h3>عمرة رمضان المبارك</h3>
+            <p>حزمة كاملة مع إقامة قريبة من الحرم وخدمات متكاملة.</p>
+            <a class="cta" href="contact.html">اتصل بنا</a>
+          </div>
+        </article>
+
+        <article class="offer">
+          <img src="images/istanbul.jpg" alt="إسطنبول">
+          <div class="body">
+            <h3>رحلة إسطنبول الحلال</h3>
+            <p>إقامة في فنادق حلال وجولات تاريخية مريحة.</p>
+            <a class="cta" href="contact.html">اتصل بنا</a>
+          </div>
+        </article>
+
+        <article class="offer">
+          <img src="images/kualalumpur.jpg" alt="كوالالمبور">
+          <div class="body">
+            <h3>إقامة فاخرة في كوالالمبور</h3>
+            <p>فنادق 5★ مع خدمات متميزة وبرنامج سياحي متكامل.</p>
+            <a class="cta" href="contact.html">اتصل بنا</a>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- اتصل بنا -->
-  <section class="contact">
+    <section id="contact" class="contact">
       <div class="section-title">تواصل معنا</div>
       <div class="contact-card">
         <form action="https://formspree.io/f/mzzjqjog" method="POST">
           <input type="text" name="name" placeholder="الاسم الكامل" required>
           <input type="email" name="_replyto" placeholder="البريد الإلكتروني" required>
-          <textarea name="message" placeholder="الرسالة..." required></textarea>
-          <button type="submit">إرسال</button>
+          <textarea name="message" placeholder="رسالتك..." required></textarea>
+          <button type="submit">إرسال الرسالة</button>
         </form>
-        <p style="margin-top:12px; color:var(--muted);">البريد الإلكتروني: minatravel2019@gmail.com</p>
+
+        <div class="wa-links">
+          <a href="https://wa.me/32487491576" target="_blank">💬 واتساب (بلجيكا)</a>
+          <a href="https://wa.me/212661865316" target="_blank">💬 واتساب (المغرب)</a>
+        </div>
       </div>
     </section>
   </main>
 
-</body>
-</html>
-<footer>
-    © 2025 مِنى ترافل — جميع الحقوق محفوظة.
+  <footer>
+    © 2025 مِنا ترافل — جميع الحقوق محفوظة.
   </footer>
 
-  <!-- الفوتر -->
-  </a>
 </body>
 </html>
