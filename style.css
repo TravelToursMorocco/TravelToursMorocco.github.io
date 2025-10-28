@@ -334,4 +334,8 @@ footer {
   color: var(--muted);
   font-size: 0.9rem;
 }
+.phone {
+  direction: ltr;
+  unicode-bidi: embed;
+}
 
