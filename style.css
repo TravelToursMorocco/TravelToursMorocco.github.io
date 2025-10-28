@@ -258,3 +258,80 @@ footer {
   font-size: 0.9rem;
   margin-top: 60px;
 }
+/* 💌 صفحة الاتصال بتصميم منسق وفاخر */
+.contact {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px var(--shadow);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  margin-bottom: 14px;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  font-family: var(--font-main);
+}
+
+.contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact button {
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact button:hover {
+  background: #b6932d;
+}
+
+.wa-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wa-links a {
+  text-decoration: none;
+  color: var(--gold);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.wa-links a:hover {
+  color: #a57f25;
+}
+
+.email-text {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
