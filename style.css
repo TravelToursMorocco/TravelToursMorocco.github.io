@@ -338,4 +338,9 @@ footer {
   direction: ltr;
   unicode-bidi: embed;
 }
-
+ <div class="lang-switch">
+      <a href="index.html">AR</a>
+      <a href="index-fr.html">FR</a>
+    </div>
+  </nav>
+</header>
