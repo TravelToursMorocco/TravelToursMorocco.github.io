@@ -180,6 +180,11 @@ section {
   transition: var(--transition);
 }
 
+.offers-section {
+  background: linear-gradient(to bottom, #fff8e1, #f9f3d4);
+  /* background: url('images/umrah-bg.jpg') center/cover no-repeat; */
+  padding: 60px 20px;
+}
 .offer:hover {
   transform: translateY(-6px);
   box-shadow: 0 4px 16px var(--shadow);
@@ -201,18 +206,26 @@ section {
 }
 
 .cta {
-  display: inline-block;
-  margin-top: 10px;
-  color: var(--white);
-  background: var(--gold);
-  padding: 8px 16px;
-  border-radius: var(--radius);
+ display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #d4af37, #b68c00);
+  color: #fff;
+  border-radius: 50px;
   text-decoration: none;
-  transition: var(--transition);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 .cta:hover {
-  background: #b9932c;
+ background: linear-gradient(135deg, #b68c00, #d4af37);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+.offer a.cta {
+  
 }
 
 /* 📩 اتصل بنا */
