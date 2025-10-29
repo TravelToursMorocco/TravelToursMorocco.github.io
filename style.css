@@ -259,13 +259,13 @@ section {
   text-align: center;
 }
 
-contact form {
+.contact form {
   display: flex;
   flex-direction: column;
 }
 
 .contact input,
-contact textarea {
+.contact textarea {
   margin-bottom: 14px;
   padding: 12px;
   border-radius: var(--radius);
@@ -322,7 +322,43 @@ contact textarea {
   unicode-bidi: embed;
 }
 
-/* صفحة الخلفيات المخصصة */
+/* 📱 الفوتر */
+footer {
+  background: var(--gold);
+  color: var(--white);
+  text-align: center;
+  padding: 14px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+/* 🌄 خلفيات مخصصة لكل صفحة */
+
+/* الصفحة الرئيسية */
+body.index {
+  background: url('images/home-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* صفحة العروض */
+body.offres {
+  background: url('images/offres-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* صفحة العمرة */
+body.umrah {
+  background: url('images/omra-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* صفحة من نحن */
+body.about {
+  background: url('images/about-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* صفحة الاتصال */
+body.contact {
+  background: url('images/contact-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* طبقة شفافة ناعمة لتوضيح النص */
 body.index::before,
 body.offres::before,
 body.umrah::before,
@@ -333,14 +369,4 @@ body.contact::before {
   inset: 0;
   background: rgba(255, 255, 255, 0.85);
   z-index: -1;
-}
-
-/* 📱 الفوتر */
-footer {
-  background: var(--gold);
-  color: var(--white);
-  text-align: center;
-  padding: 14px;
-  font-size: 0.9rem;
-  margin-top: 60px;
 }
