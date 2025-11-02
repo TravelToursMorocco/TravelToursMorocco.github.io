@@ -800,52 +800,34 @@ header, .top-bar {
   .menu-toggle {
     display: block;
   }
-}
-/* ✅ إصلاح محاذاة قسم الخدمات في الجوال */
+  
+/* ✅ قسم الخدمات النهائي - منظم ومتناسق على كل الأجهزة */
 .services {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 900px;
   text-align: center;
-  padding: 40px 20px;
 }
 
-.services ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.services li {
-  background: #fff;
-  margin: 10px auto;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  font-weight: 500;
+.services .section-title {
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 25px;
   position: relative;
-  width: 90%;
 }
 
-/* ✅ أيقونة ذهبية صغيرة في اليمين */
-.services li::after {
-  content: "✔️";
-  position: absolute;
-  right: 12px;
-  color: #d4af37;
-  font-size: 1rem;
-}
-
-/* ✅ محاذاة مثالية في الجوال */
-@media (max-width: 768px) {
-  .services li {
-    width: 95%;
-    font-size: 1rem;
-  }
-}
-/* ✅ إصلاح عرض قسم الخدمات بشكل نهائي في الجوال */
-.services {
-  text-align: center;
-  padding: 40px 15px;
+.services .section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  margin: 10px auto 0;
+  border-radius: 3px;
 }
 
 .services ul {
@@ -857,29 +839,36 @@ header, .top-bar {
 
 .services li {
   background: #fff;
-  margin: 10px auto;
-  padding: 12px 45px 12px 12px; /* مساحة داخلية متوازنة */
+  margin: 12px auto;
+  padding: 12px 45px 12px 12px; /* مسافة داخلية متوازنة */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-weight: 500;
   position: relative;
-  width: calc(100% - 30px); /* ✅ حتى لا يخرج عن الشاشة */
+  width: calc(100% - 30px); /* لا يتجاوز حدود الشاشة */
   text-align: left;
   direction: ltr;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ✅ الأيقونة الذهبية الصغيرة */
+.services li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+/* ✅ أيقونة ذهبية أنيقة */
 .services li::after {
-  content: "✔️";
+  content: "✔";
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: #d4af37;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-/* ✅ تعديل إضافي للجوال */
+/* ✅ عرض مثالي للجوال */
 @media (max-width: 768px) {
   .services li {
     width: calc(100% - 40px);
