@@ -139,17 +139,21 @@ nav a.active {
   letter-spacing: 0,5px
 }
 
+/* ✨ تأثير فخم على الأزرار */
 .btn {
   background: var(--gold);
   color: var(--white);
   padding: 12px 26px;
   border-radius: var(--radius);
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-  background: #b79330;
+  background: linear-gradient(90deg, #d4af37, #f1c40f);
+  box-shadow: 0 0 20px rgba(241, 196, 15, 0.6);
+  transform: scale(1.05);
 }
 
 /* 🕋 الأقسام العامة */
