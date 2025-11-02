@@ -85,5 +85,17 @@
     <p>© 2025 مِنى ترافل | جميع الحقوق محفوظة</p>
     <p>بإشراف شركة <a href="#">مِنى ترافل</a></p>
   </footer>
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
