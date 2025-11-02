@@ -423,3 +423,13 @@ body.contact::before {
     text-align: center;
   }
 }
+/* تأثير الخلفية المتحركة (Parallax) */
+.hero {
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll; /* لتعطيله على الهواتف لتفادي مشاكل الأداء */
+  }
+}
