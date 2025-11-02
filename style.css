@@ -842,3 +842,48 @@ header, .top-bar {
     font-size: 1rem;
   }
 }
+/* ✅ إصلاح عرض قسم الخدمات بشكل نهائي في الجوال */
+.services {
+  text-align: center;
+  padding: 40px 15px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.services li {
+  background: #fff;
+  margin: 10px auto;
+  padding: 12px 45px 12px 12px; /* مساحة داخلية متوازنة */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  position: relative;
+  width: calc(100% - 30px); /* ✅ حتى لا يخرج عن الشاشة */
+  text-align: left;
+  direction: ltr;
+}
+
+/* ✅ الأيقونة الذهبية الصغيرة */
+.services li::after {
+  content: "✔️";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d4af37;
+  font-size: 1.1rem;
+}
+
+/* ✅ تعديل إضافي للجوال */
+@media (max-width: 768px) {
+  .services li {
+    width: calc(100% - 40px);
+    font-size: 1rem;
+    padding: 10px 40px 10px 10px;
+  }
+}
