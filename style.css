@@ -17,6 +17,8 @@ body {
   background-color: var(--light-bg);
   color: var(--dark);
   direction: rtl;
+  overflow-x :hidden;
+  text-align: center;
 }
 
 /* ✨ الشريط العلوي */
@@ -411,5 +413,12 @@ body.contact::before {
   }
   to {
     background-size: 105%;
+  }
+}
+@media (max-width: 768px) {
+  .hero, header, section, footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
   }
 }
