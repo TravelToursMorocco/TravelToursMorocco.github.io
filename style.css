@@ -591,4 +591,12 @@ header, .top-bar {
     background-size: cover;
     background-position: center center;
   }
+}هل/* تحسين عرض الصورة على شاشات الكمبيوتر */
+@media (min-width: 1024px) {
+  .hero {
+    background-size: contain; /* يجعل الصورة تظهر كاملة */
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 90vh; /* خفّض الارتفاع قليلاً لتظهر كاملة */
+  }
 }
