@@ -600,3 +600,52 @@ header, .top-bar {
     height: 90vh; /* خفّض الارتفاع قليلاً لتظهر كاملة */
   }
 }
+/* ✅ تحسين عرض الصورة على شاشات الكمبيوتر */
+@media (min-width: 1024px) {
+  .hero {
+    background-size: contain; /* تظهر الصورة بالكامل بدون قص */
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 90vh; /* تخفيض الارتفاع قليلاً لتناسب الشاشة */
+  }
+}
+
+/* ✅ تحسين أزرار اللغة في الهيدر */
+.lang-switch {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: white;
+  color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.lang-switch a.active {
+  background-color: var(--gold);
+  color: white;
+}
+
+.lang-switch a:hover {
+  background-color: #d4af37;
+  color: white;
+  border-color: #d4af37;
+}
+
+/* ✅ إصلاح عرض الأزرار في الجوال */
+@media (max-width: 480px) {
+  .lang-switch {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
