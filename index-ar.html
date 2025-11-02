@@ -20,13 +20,16 @@
       <span class="site-title">Travel Tours Morocco</span>
     </div>
 
-    <nav dir="rtl">
-      <a href="index-ar.html" class="home-link active">الرئيسية</a>
-      <a href="offres-ar.html" class="offers-link">العروض</a>
-      <a href="umrah-ar.html" class="umrah-link">العمرة</a>
-      <a href="about-ar.html" class="about-link">من نحن</a>
-      <a href="contact-ar.html" class="contact-link">اتصل بنا</a>
-    </nav>
+    <nav dir="rtl" class="navbar">
+  <button class="menu-toggle" aria-label="القائمة">☰</button>
+  <ul class="nav-links">
+    <li><a href="index-ar.html" class="home-link active">الرئيسية</a></li>
+    <li><a href="offres-ar.html" class="offers-link">العروض</a></li>
+    <li><a href="umrah-ar.html" class="umrah-link">العمرة</a></li>
+    <li><a href="about-ar.html" class="about-link">من نحن</a></li>
+    <li><a href="contact-ar.html" class="contact-link">اتصل بنا</a></li>
+  </ul>
+</nav>
 
     <div class="lang-switch">
       <a href="index-ar.html" class="active">AR</a>
@@ -132,5 +135,13 @@
 
     elements.forEach(el => observer.observe(el));
   </script>
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
