@@ -475,3 +475,35 @@ body.contact::before {
   color: #ffffff; /* أبيض واضح */
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); /* ظل أنيق لزيادة الوضوح */
 }
+/* ✅ إصلاح العرض الكامل في الهواتف */
+.hero {
+  width: 100vw; /* امتداد الصورة عرض الشاشة بالكامل */
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ✅ إزالة أي حدود أو فراغ حول الصفحة في الهاتف */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ✅ تحسين النصوص والأزرار في الهواتف */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 22px;
+  }
+}
