@@ -131,6 +131,13 @@ nav a.active {
   font-size: 1.1rem;
   margin-bottom: 24px;
 }
+.hero h1,
+.hero p {
+  color: #ffffff; /* أبيض واضح */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); /* ظل أنيق لزيادة الوضوح */
+  text-transform: none;
+  letter-spacing: 0,5px
+}
 
 .btn {
   background: var(--gold);
