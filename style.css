@@ -548,3 +548,25 @@ header, .top-bar {
   margin-top: 0;
   padding-top: 0;
 }
+/* 📱 إصلاح الفراغ الرمادي في الجوال */
+@media (max-width: 768px) {
+  body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    background-color: #fff !important;
+  }
+
+  header, .top-bar {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+  }
+}
