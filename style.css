@@ -730,3 +730,25 @@ header, .top-bar {
   right: 0;
   top: 0;
 }
+/* ✅ تحسين تنسيق القائمة في الهاتف */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* مسافة بسيطة بين العناصر */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 4px 0;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
