@@ -801,3 +801,44 @@ header, .top-bar {
     display: block;
   }
 }
+/* ✅ إصلاح محاذاة قسم الخدمات في الجوال */
+.services {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.services li {
+  background: #fff;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  width: 90%;
+}
+
+/* ✅ أيقونة ذهبية صغيرة في اليمين */
+.services li::after {
+  content: "✔️";
+  position: absolute;
+  right: 12px;
+  color: #d4af37;
+  font-size: 1rem;
+}
+
+/* ✅ محاذاة مثالية في الجوال */
+@media (max-width: 768px) {
+  .services li {
+    width: 95%;
+    font-size: 1rem;
+  }
+}
