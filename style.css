@@ -433,3 +433,29 @@ body.contact::before {
     background-attachment: scroll; /* لتعطيله على الهواتف لتفادي مشاكل الأداء */
   }
 }
+.whatsapp-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366; /* اللون الأخضر الخاص بواتساب */
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc5d;
+  transform: translateY(-2px);
+}
