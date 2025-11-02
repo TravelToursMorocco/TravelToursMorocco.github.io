@@ -466,3 +466,8 @@ body.contact::before {
   background-color: #1ebc5d;
   transform: translateY(-2px);
 }
+.hero h1,
+.hero p {
+  color: #ffffff; /* أبيض واضح */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); /* ظل أنيق لزيادة الوضوح */
+}
