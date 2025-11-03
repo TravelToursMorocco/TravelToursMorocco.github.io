@@ -806,3 +806,59 @@ header, .top-bar {
     margin-right: 0 !important;
   }
 }
+/* ✅ إصلاح نهائي لتنسيق الموقع على الجوال لكل اللغات */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #fff !important;
+  }
+
+  header, .hero, section, footer {
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+    box-sizing: border-box;
+  }
+
+  nav ul, .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li, .nav-links li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .lang-switch {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .services, .about, .contact-card {
+    width: 95vw !important;
+    margin: 10px auto;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
