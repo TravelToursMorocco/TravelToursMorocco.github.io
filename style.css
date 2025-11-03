@@ -776,6 +776,31 @@ header, .top-bar {
     padding: 10px 40px 10px 10px;
   }
 }
+  /* === تحسين العرض على الجوال والتباعد داخل الأقسام === */
+@media (max-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 30px 16px;
+  }
+
+  .about-content, .offers-grid, .contact-container {
+    padding: 20px 16px;
+    box-sizing: border-box;
+  }
+
+  p {
+    line-height: 1.8;
+    text-align: justify;
+    word-wrap: break-word;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+}
 /* تحسين العرض على الهاتف */
 body {
   padding-left: 14px;
