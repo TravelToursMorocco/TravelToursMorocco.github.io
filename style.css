@@ -238,4 +238,20 @@ nav ul {
 
 nav ul li {
   list-style: none;
+}/* ✅ إصلاح الفراغ الأبيض على الجوال */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .hero, header, section, footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lang-switch, .nav-links {
+    max-width: 100%;
+  }
 }
