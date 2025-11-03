@@ -822,3 +822,47 @@ header, .top-bar {
     width: 100%;
   }
 }
+/* ✅ إصلاح قسم من نحن / À propos de nous للجوال */
+.about-section {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.about-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.about-section p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+/* ✅ إصلاح الصورة على الهواتف */
+@media (max-width: 768px) {
+  .about-section {
+    background-size: contain;
+    background-position: top center;
+    min-height: auto;
+    padding: 60px 15px;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
