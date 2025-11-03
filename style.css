@@ -949,3 +949,14 @@ header, .top-bar {
 [dir="rtl"] header {
   align-items: center;
 }
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 15px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+  header {
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+}
