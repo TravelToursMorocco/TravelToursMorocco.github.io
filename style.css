@@ -1,22 +1,23 @@
-/* 🌙 مِنى ترافل — تصميم ذهبي أبيض فاخر */
+/* 🌙 Mina Travel Morocco — نسخة متوازنة ومنظفة */
 :root {
   --gold: #c9a43e;
   --white: #ffffff;
   --dark: #1b1b1b;
   --light-bg: #fdfdfb;
   --muted: #666;
-  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow: rgba(0,0,0,0.08);
   --radius: 14px;
   --transition: 0.3s ease;
   --font-main: 'Tajawal', sans-serif;
 }
 
-/* 🩶 الأساسيات العامة */
-body {
+/* 🌍 الأساس */
+body, html {
   margin: 0;
+  padding: 0;
   font-family: var(--font-main);
-  background-color: var(--light-bg);
   color: var(--dark);
+  background-color: var(--light-bg);
   direction: rtl;
   overflow-x: hidden;
   text-align: center;
@@ -29,10 +30,9 @@ body {
   color: var(--white);
   padding: 10px 0;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
-/* 🕌 رأس الصفحة */
+/* 🕌 الهيدر */
 header {
   background: var(--white);
   box-shadow: 0 2px 8px var(--shadow);
@@ -45,43 +45,11 @@ header {
   z-index: 10;
 }
 
-.logo {
-  height: 58px;
-  margin-left: 10px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.site-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--gold);
-}
-
-/* 🌍 القائمة */
-nav a {
-  color: var(--dark);
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-nav a:hover,
-nav a.active {
-  color: var(--gold);
-  border-bottom: 2px solid var(--gold);
-}
-
-/* 🌐 أزرار اللغة */
+/* 🌐 اللغات */
 .lang-switch {
   display: flex;
   gap: 8px;
 }
-
 .lang-switch a {
   text-decoration: none;
   padding: 6px 10px;
@@ -89,203 +57,117 @@ nav a.active {
   border-radius: 8px;
   color: var(--gold);
   font-weight: 700;
+  background-color: #fff;
   transition: var(--transition);
-  background-color: white;
 }
-
-.lang-switch a:hover,
-.lang-switch a.active {
+.lang-switch a.active,
+.lang-switch a:hover {
   background: var(--gold);
-  color: var(--white);
+  color: #fff;
 }
 
-/* 🌅 البانر الرئيسي (Hero) */
+/* 🧭 القائمة */
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+nav a:hover, nav a.active {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* ✅ القائمة المنسدلة للجوال */
+.menu-toggle {
+  display: none;
+  background: var(--gold);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10;
+  }
+  .nav-links.show { display: flex; }
+  .menu-toggle { display: block; }
+}
+
+/* 🌅 البانر الرئيسي */
 .hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
-
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.20), rgba(0,0,0,0.55));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.6));
 }
-
 .hero .content {
   position: relative;
   z-index: 1;
   max-width: 650px;
 }
-
-.hero h1,
-.hero p {
+.hero h1, .hero p {
   color: #fff;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 24px;
-}
-
-/* ✨ زر أنيق */
-.btn {
-  background: var(--gold);
-  color: var(--white);
-  padding: 12px 26px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.btn:hover {
-  background: linear-gradient(90deg, #d4af37, #f1c40f);
-  box-shadow: 0 0 20px rgba(241,196,15,0.6);
-  transform: scale(1.05);
-}
-
-/* 🕋 الأقسام العامة */
-section {
-  padding: 60px 6%;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  color: var(--gold);
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: var(--gold);
-  margin: 10px auto 0;
-}
-
-/* 💼 قسم الخدمات */
-.services {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 60px 20px;
-  margin: 40px auto;
-  max-width: 900px;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.services li {
-  background: #fff;
-  margin: 12px auto;
-  padding: 12px 45px 12px 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-weight: 500;
-  position: relative;
-  width: calc(100% - 30px);
-  text-align: right;
-  direction: rtl;
-}
-
-.services li::after {
-  content: "✔";
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #d4af37;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* 📩 اتصل بنا */
-.contact {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-card {
-  background: var(--white);
-  padding: 40px;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 14px var(--shadow);
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-/* 📱 الفوتر */
-footer {
-  background: var(--gold);
-  color: var(--white);
-  text-align: center;
-  padding: 14px;
-  font-size: 0.9rem;
-  margin-top: 60px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 /* ✅ قسم من نحن / À propos */
 body.about .hero,
 body.a-propos .hero {
-  position: relative;
-  overflow: hidden;
   background-image: url('./images/paris-bg.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  min-height: 90vh !important;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   text-align: center;
 }
-
-/* ✅ فلتر داكن */
 body.about .hero::after,
 body.a-propos .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.3) 0%,
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0.35) 0%,
     rgba(0,0,0,0.55) 60%,
-    rgba(0,0,0,0.75) 100%
-  ) !important;
+    rgba(0,0,0,0.75) 100%);
   z-index: 1;
 }
-
-/* ✅ نص واضح */
 body.about .hero h1,
 body.a-propos .hero h1,
 body.about .hero p,
@@ -293,26 +175,21 @@ body.a-propos .hero p {
   position: relative;
   z-index: 2;
   color: #fff !important;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.9) !important;
-  font-weight: 700 !important;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.9);
 }
 
-/* ✅ استجابة الهواتف */
+/* 📱 الهواتف */
 @media (max-width: 768px) {
-  body.about .hero,
-  body.a-propos .hero {
-    min-height: 100vh !important;
-    padding: 0 15px;
+  body, html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
   }
-
-  body.about .hero h1,
-  body.a-propos .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  body.about .hero p,
-  body.a-propos .hero p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+  .hero { min-height: 100vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  nav ul { flex-direction: column; gap: 8px; }
 }
