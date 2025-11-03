@@ -980,3 +980,12 @@ header, .top-bar {
   text-align: center;
   line-height: 1.3;
 }
+.lang-switch {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+header img {
+  margin-bottom: 5px;
+}
