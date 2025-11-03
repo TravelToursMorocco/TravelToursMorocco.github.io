@@ -950,3 +950,16 @@ body.a-propos .hero p {
     line-height: 1.6;
   }
 }
+/* ✅ رفع النص قليلاً للأعلى في قسم من نحن */
+body.about .hero .content,
+body.a-propos .hero .content {
+  position: relative;
+  top: -40px; /* ارفع النص للأعلى */
+}
+
+@media (max-width: 768px) {
+  body.about .hero .content,
+  body.a-propos .hero .content {
+    top: -20px; /* أقل رفع للجوال */
+  }
+}
