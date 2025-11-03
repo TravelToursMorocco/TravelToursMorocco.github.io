@@ -869,3 +869,38 @@ header, .top-bar {
     padding: 22px 16px;
   }
 }
+/* ==== إصلاح تنسيق القائمة والشعار على الجوال ==== */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* مسافة بين العنوان والقائمة */
+    padding: 10px 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; /* مسافة بين الكلمات */
+    font-size: 15px; /* حجم أنسب للنص بالعربية والفرنسية */
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: 85px; /* حجم أصغر قليلاً للشعار */
+    height: auto;
+  }
+
+  .site-title {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
