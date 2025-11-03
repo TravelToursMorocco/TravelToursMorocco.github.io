@@ -967,3 +967,16 @@ header, .top-bar {
   line-height: 1.6;
   text-align: center;
 }
+.hero p {
+  word-break: keep-all; /* يمنع تكسير الكلمات */
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 10px; /* مسافة من الجوانب حتى لا تلتصق بالحافة */
+}
+
+.hero h1, .hero h2 {
+  text-align: center;
+  line-height: 1.3;
+}
