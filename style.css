@@ -777,3 +777,32 @@ header, .top-bar {
     padding: 10px 40px 10px 10px;
   }
 }
+/* ✅ إصلاح العرض الكامل في الجوال - حل نهائي */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  header, .hero, section, footer {
+    width: 100vw !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .services,
+  .about,
+  .contact-card {
+    width: 95vw !important;
+    margin: 10px auto !important;
+    border-radius: 14px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-right: 0 !important;
+  }
+}
