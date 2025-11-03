@@ -884,3 +884,85 @@ header {
     flex: 0 1 auto;
   }
 }
+/* 🎯 إصلاح نهائي لشكل الهيدر في الجوال */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .logo {
+    height: 46px;
+    width: auto;
+  }
+
+  .site-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 6px 0 0 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 6px;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 1rem;
+    color: var(--dark);
+    text-decoration: none;
+  }
+
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    width: 100%;
+  }
+
+  .lang-switch a {
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: 700;
+    background: white;
+    color: var(--gold);
+  }
+
+  .lang-switch a.active {
+    background: var(--gold);
+    color: white;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+}
