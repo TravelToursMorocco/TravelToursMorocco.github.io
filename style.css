@@ -909,3 +909,49 @@ body.a-propos .hero p {
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
   font-weight: 700;
 }
+/* ✅ إصلاح تنسيق الشعار والعنوان في الجوال */
+.logo {
+  height: 55px;
+  width: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ تنسيق العنوان بجانب الشعار */
+.site-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* ✅ محاذاة الهيدر في الجوال */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .site-title {
+    margin-top: 8px;
+    font-size: 1.2rem;
+  }
+
+  nav {
+    margin-top: 6px;
+  }
+}
