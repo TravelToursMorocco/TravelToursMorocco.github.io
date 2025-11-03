@@ -1,38 +1,37 @@
-/* 🌙 Mina Travel Morocco — نسخة متوازنة ومنظفة */
+/* 🌙 Mina Travel — Elegant Gold & White Design */
 :root {
   --gold: #c9a43e;
   --white: #ffffff;
   --dark: #1b1b1b;
   --light-bg: #fdfdfb;
   --muted: #666;
-  --shadow: rgba(0,0,0,0.08);
+  --shadow: rgba(0, 0, 0, 0.08);
   --radius: 14px;
   --transition: 0.3s ease;
   --font-main: 'Tajawal', sans-serif;
 }
 
-/* 🌍 الأساس */
-body, html {
+body {
   margin: 0;
-  padding: 0;
   font-family: var(--font-main);
-  color: var(--dark);
   background-color: var(--light-bg);
+  color: var(--dark);
   direction: rtl;
   overflow-x: hidden;
   text-align: center;
 }
 
-/* ✨ الشريط العلوي */
+/* ✨ Top Bar */
 .top-bar {
   text-align: center;
   background: var(--gold);
   color: var(--white);
   padding: 10px 0;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* 🕌 الهيدر */
+/* 🕌 Header */
 header {
   background: var(--white);
   box-shadow: 0 2px 8px var(--shadow);
@@ -45,7 +44,38 @@ header {
   z-index: 10;
 }
 
-/* 🌐 اللغات */
+.logo {
+  height: 58px;
+  margin-left: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* 🌍 Navigation */
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* 🌐 Language Switch */
 .lang-switch {
   display: flex;
   gap: 8px;
@@ -57,185 +87,171 @@ header {
   border-radius: 8px;
   color: var(--gold);
   font-weight: 700;
-  background-color: #fff;
   transition: var(--transition);
 }
-.lang-switch a.active,
-.lang-switch a:hover {
+.lang-switch a:hover,
+.lang-switch a.active {
   background: var(--gold);
-  color: #fff;
+  color: var(--white);
 }
 
-/* 🧭 القائمة */
-nav a {
-  color: var(--dark);
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
-  transition: var(--transition);
-}
-nav a:hover, nav a.active {
-  color: var(--gold);
-  border-bottom: 2px solid var(--gold);
-}
-
-/* ✅ القائمة المنسدلة للجوال */
-.menu-toggle {
-  display: none;
-  background: var(--gold);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  border-radius: 6px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    text-align: center;
-    padding: 10px 0;
-    z-index: 10;
-  }
-  .nav-links.show { display: flex; }
-  .menu-toggle { display: block; }
-}
-
-/* 🌅 البانر الرئيسي */
+/* 🌅 Hero Section */
 .hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
+
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.6));
 }
+
 .hero .content {
   position: relative;
   z-index: 1;
   max-width: 650px;
-}
-.hero h1, .hero p {
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  animation: fadeInUp 1.5s ease-out forwards;
 }
 
-/* ✅ قسم من نحن / À propos */
-body.about .hero,
-body.a-propos .hero {
-  background-image: url('./images/paris-bg.jpg') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✨ Buttons */
+.btn {
+  background: var(--gold);
+  color: var(--white);
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn:hover {
+  background: linear-gradient(90deg, #d4af37, #f1c40f);
+  transform: scale(1.05);
+}
+
+/* 💼 Services */
+.services {
+  background: var(--white);
+  padding: 60px 20px;
   text-align: center;
-}
-body.about .hero::after,
-body.a-propos .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom,
-    rgba(0,0,0,0.35) 0%,
-    rgba(0,0,0,0.55) 60%,
-    rgba(0,0,0,0.75) 100%);
-  z-index: 1;
-}
-body.about .hero h1,
-body.a-propos .hero h1,
-body.about .hero p,
-body.a-propos .hero p {
-  position: relative;
-  z-index: 2;
-  color: #fff !important;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.9);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin: 40px auto;
+  max-width: 900px;
 }
 
-/* 📱 الهواتف */
-@media (max-width: 768px) {
-  body, html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #fff !important;
-  }
-  .hero { min-height: 100vh; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  nav ul { flex-direction: column; gap: 8px; }
-}
-/* ✅ إصلاح تنسيق الشعار والعنوان في الجوال */
-.logo {
-  height: 55px;
-  width: auto;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* ✅ تنسيق العنوان بجانب الشعار */
-.site-title {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.3rem;
-  font-weight: 700;
+.services .section-title {
+  font-size: 1.8rem;
   color: var(--gold);
-  line-height: 1.2;
-  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
-/* ✅ محاذاة الهيدر في الجوال */
+.services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.services li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+}
+.services li::before {
+  content: "✔";
+  color: var(--gold);
+  font-weight: bold;
+  position: absolute;
+  right: 12px;
+}
+
+/* 📩 Contact */
+.contact-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px var(--shadow);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* 📱 Footer */
+footer {
+  background: var(--gold);
+  color: var(--white);
+  text-align: center;
+  padding: 18px;
+  font-size: 0.95rem;
+  margin-top: 60px;
+}
+
+footer::after {
+  content: "✨ Designed by Mina Travel ✨";
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+/* ✅ Responsive Fixes */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .btn { font-size: 1rem; padding: 10px 20px; }
+  .services ul { grid-template-columns: 1fr; }
+  footer { font-size: 0.85rem; }
+}
+/* ✅ إزالة النقاط من القائمة وتوسيطها */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+}/* ✅ إصلاح الفراغ الأبيض على الجوال */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
   }
 
-  .logo {
-    height: 50px;
-    margin: 0 auto;
+  .hero, header, section, footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  .site-title {
-    margin-top: 8px;
-    font-size: 1.2rem;
-  }
-
-  nav {
-    margin-top: 6px;
+  .lang-switch, .nav-links {
+    max-width: 100%;
   }
 }
