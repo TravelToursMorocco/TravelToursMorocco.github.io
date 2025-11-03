@@ -871,37 +871,41 @@ body.a-propos .hero p {
   color: #fff;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8); /* وضوح قوي مثل Accueil */
 }
-/* ✅ إصلاح نهائي لظهور التدرج في قسم من نحن */
+/* 🎯 ضبط قسم من نحن / À propos */
 body.about .hero,
 body.a-propos .hero {
-  position: relative; /* ضروري لعمل ::after */
-  overflow: hidden;   /* يمنع أي تمدد خارج الصورة */
+  position: relative;
+  overflow: hidden;
+  background-image: url('./images/paris-bg.jpg'); /* ← اسم الصورة الصحيح */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 85vh;
 }
 
+/* 🎨 الفلتر الداكن مع وضوح النص */
 body.about .hero::after,
 body.a-propos .hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0) 100%
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.75) 100%
   );
   z-index: 1;
 }
 
-/* ✅ النص فوق الطبقة الغامقة */
+/* ✨ النص الأبيض فوق الصورة */
 body.about .hero h1,
 body.a-propos .hero h1,
 body.about .hero p,
 body.a-propos .hero p {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: #fff !important;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+  font-weight: 700;
 }
