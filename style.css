@@ -877,47 +877,75 @@ body.a-propos .hero p {
     font-size: 1rem;
     line-height: 1.6;
   }
-}
-/* ✅ إصلاح قسم من نحن / À propos de nous للجوال */
-.about-section {
-  background-size: cover;
-  background-position: center center;
+/* ✅ تحسين نهائي لقسم من نحن و À propos */
+body.about .hero,
+body.a-propos .hero {
+  background-size: cover !important; /* غطّ الشاشة كلها بدون فراغ */
+  background-position: center center !important;
   background-repeat: no-repeat;
-  min-height: 80vh;
+  min-height: 100vh; /* ✅ يملأ الشاشة تمامًا */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
-  padding: 40px 20px;
+  color: #fff;
+  position: relative;
 }
 
-.about-section h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+/* ✅ فلتر غامق خفيف فوق الصورة ليبرز النص */
+body.about .hero::after,
+body.a-propos .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* ✅ النص فوق الفلتر */
+body.about .hero h1,
+body.a-propos .hero h1,
+body.about .hero p,
+body.a-propos .hero p {
+  position: relative;
+  z-index: 2;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-.about-section p {
+body.about .hero h1,
+body.a-propos .hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+body.about .hero p,
+body.a-propos .hero p {
   max-width: 700px;
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 0 auto;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  padding: 0 20px;
 }
 
-/* ✅ إصلاح الصورة على الهواتف */
+/* ✅ للجوال */
 @media (max-width: 768px) {
-  .about-section {
-    background-size: contain;
-    background-position: top center;
-    min-height: auto;
-    padding: 60px 15px;
+  body.about .hero,
+  body.a-propos .hero {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 100vh;
+    padding: 0 15px;
   }
 
-  .about-section p {
+  body.about .hero h1,
+  body.a-propos .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  body.about .hero p,
+  body.a-propos .hero p {
     font-size: 1rem;
     line-height: 1.6;
   }
