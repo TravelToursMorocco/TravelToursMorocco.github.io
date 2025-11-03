@@ -822,46 +822,58 @@ header, .top-bar {
     width: 100%;
   }
 }
-/* ✅ إصلاح قسم من نحن / À propos de nous للجوال */
-.about-section {
-  background-size: cover;
-  background-position: center center;
+/* ✅ إصلاح قسم "من نحن" و "À propos de nous" */
+body.about .hero,
+body.a-propos .hero {
+  background-size: contain !important; /* تظهر الصورة كاملة */
+  background-position: center top !important;
   background-repeat: no-repeat;
-  min-height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
-  padding: 40px 20px;
 }
 
-.about-section h1 {
+/* ✅ تحسين النص داخل قسم من نحن */
+body.about .hero h1,
+body.a-propos .hero h1 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: #fff;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  margin-bottom: 15px;
 }
 
-.about-section p {
+body.about .hero p,
+body.a-propos .hero p {
   max-width: 700px;
   font-size: 1.1rem;
   line-height: 1.8;
-  margin: 0 auto;
+  color: #fff;
+  text-align: center;
   text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* ✅ إصلاح الصورة على الهواتف */
+/* ✅ ضبط خاص للهواتف */
 @media (max-width: 768px) {
-  .about-section {
-    background-size: contain;
-    background-position: top center;
-    min-height: auto;
-    padding: 60px 15px;
+  body.about .hero,
+  body.a-propos .hero {
+    background-size: contain !important;
+    height: auto;
+    padding: 60px 10px;
   }
 
-  .about-section p {
+  body.about .hero h1,
+  body.a-propos .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  body.about .hero p,
+  body.a-propos .hero p {
     font-size: 1rem;
     line-height: 1.6;
   }
