@@ -226,3 +226,16 @@ footer::after {
   .services ul { grid-template-columns: 1fr; }
   footer { font-size: 0.85rem; }
 }
+/* ✅ إزالة النقاط من القائمة وتوسيطها */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+}
