@@ -963,3 +963,26 @@ body.a-propos .hero .content {
     top: -20px; /* أقل رفع للجوال */
   }
 }
+/* ✅ تحسين وضوح النص في قسم من نحن */
+body.about .hero::after,
+body.a-propos .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.55)
+  ); /* تدرج غامق أنيق */
+  z-index: 1;
+}
+
+/* ✅ النص فوق الفلتر واضح ومضيء */
+body.about .hero h1,
+body.a-propos .hero h1,
+body.about .hero p,
+body.a-propos .hero p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8); /* وضوح قوي مثل Accueil */
+}
