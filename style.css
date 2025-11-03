@@ -702,6 +702,7 @@ header, .top-bar {
   .menu-toggle {
     display: block;
   }
+  
 
 /* ✅ قسم الخدمات - النسخة النهائية الموحدة */
 .services {
@@ -775,69 +776,49 @@ header, .top-bar {
     font-size: 1rem;
     padding: 10px 40px 10px 10px;
   }
-}
-  /* === تحسين العرض على الجوال والتباعد داخل الأقسام === */
+}/* ✅ إصلاح نهائي لمشكلة الهوامش في الجوال والفراغات البيضاء */
 @media (max-width: 768px) {
-  body {
-    padding: 0 16px;
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
   }
 
-  section {
-    padding: 30px 16px;
+  header, .hero, section, footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .about-content, .offers-grid, .contact-container {
-    padding: 20px 16px;
+  .about, .services, .contact-card {
+    width: 95% !important;
+    margin: 10px auto !important;
+    padding: 20px !important;
+    border-radius: 14px;
+    text-align: center;
     box-sizing: border-box;
   }
 
-  p {
-    line-height: 1.8;
-    text-align: justify;
-    word-wrap: break-word;
-  }
-
-  h1, h2, h3 {
+  .section-title {
     text-align: center;
+    font-size: 1.6rem;
+    margin: 20px auto;
   }
-}
-/* تحسين العرض على الهاتف */
-body {
-  padding-left: 14px;
-  padding-right: 14px;
-}
 
-section {
-  padding: 40px 14px;
-}
+  p {
+    text-align: center;
+    line-height: 1.8;
+    word-break: break-word;
+  }
 
-p {
-  word-wrap: break-word;
-  line-height: 1.8;
-}
-/* ✅ إصلاح نهائي لحواف النصوص على الجوال */
-@media (max-width: 768px) {
-  body {
+  nav ul, .nav-links {
+    list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  .about-section,
-  .about-content,
-  .container,
-  section {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-    box-sizing: border-box;
-  }
-
-  p {
-    line-height: 1.8;
-    font-size: 16px;
-    text-align: justify;
-  }
-
-  h1, h2, h3 {
-    text-align: center;
+    width: 100%;
   }
 }
