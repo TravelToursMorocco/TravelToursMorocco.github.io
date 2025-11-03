@@ -987,3 +987,16 @@ body.a-propos .hero p {
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9); /* ظل أقوى للنص */
   font-weight: 700;
 }
+/* ✅ رفع النص قليلاً للأعلى في قسم من نحن */
+body.about .hero .content,
+body.a-propos .hero .content {
+  position: relative;
+  top: -40px; /* ارفع النص للأعلى */
+}
+
+@media (max-width: 768px) {
+  body.about .hero .content,
+  body.a-propos .hero .content {
+    top: -20px; /* أقل رفع للجوال */
+  }
+}
