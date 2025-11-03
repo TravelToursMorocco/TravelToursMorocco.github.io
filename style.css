@@ -960,3 +960,10 @@ header, .top-bar {
     padding-bottom: 6px;
   }
 }
+.hero p {
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.6;
+  text-align: center;
+}
