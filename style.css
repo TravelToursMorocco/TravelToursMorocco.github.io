@@ -904,3 +904,48 @@ header, .top-bar {
     font-size: 16px;
   }
 }
+/* ==== تحسين تنسيق القائمة والشعار للجوال ==== */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* مسافة بين العنوان والقائمة */
+    padding: 10px 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: 85px;
+    height: auto;
+  }
+
+  .site-title {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+
+/* ==== دعم الاتجاه العربي (RTL) في القائمة ==== */
+[dir="rtl"] nav {
+  direction: rtl;
+  text-align: center;
+}
+
+[dir="rtl"] header {
+  align-items: center;
+}
